@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 1</title>
+    <title>Mostrar/Ocultar Senha</title>
 </head>
 <body>
-    <input type="password" id="senha" placeholder="password">
-    <input type="checkbox" onclick="senha". type = this.checked ? 'text' 'pessword'>
+    <input type="password" id="senha" placeholder="Digite sua senha">
+    <input type="checkbox" onclick="mostrarSenha()"> Mostrar senha
+
+    <script>
+        function mostrarSenha() {
+            const senha = document.getElementById('senha');
+            if (senha.type === 'password') {
+                senha.type = 'text';
+            } else {
+                senha.type = 'password';
+            }
+        }
+    </script>
 </body>
 </html>
