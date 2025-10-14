@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mostrar/Ocultar Senha</title>
+    <title>Pais</title>
 </head>
 <body>
-    <input type="password" id="senha" placeholder="Digite sua senha">
-    <input type="checkbox" onclick="mostrarSenha()"> Mostrar senha
-
+    <h1>moradias do pais</h1>
+    <input type="text" name="pais" id="pais" placeholder="Digite seu país">
+    <input type="button" value="localiza" onclick="moradias()">
+    <div id="res"></div>
+    
     <script>
-        function mostrarSenha() {
-            const senha = document.getElementById('senha');
-            if (senha.type === 'password') {
-                senha.type = 'text';
+        function moradias(){
+            var pm = window.document.getElementById('pais')
+            var rl = window.document.getElementById('res')
+
+            if (pm.value === 'brasil') {
+                res.innerHTML = `você é Brasileiro`
             } else {
-                senha.type = 'password';
+                res.innerHTML = `você é Estrangeiro!`
             }
         }
     </script>
