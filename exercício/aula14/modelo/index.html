@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de exerciclo</title>
+    <title>Variaficado de idade</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>nome</h1>
+        <h1>Variaficado de idade</h1>
     </header>
     <section>
         <div>
-            Testando...
+            <p>Ano de Nascimento:
+                <input type="number" name="texto" id="texto" min="0">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="redsex" id="nas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="redsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+
+                <input type="button" value="Variaficar" onclick="variaficar()">
+                <p>Preencha os dado acima para ver o resultado!</p>
+            </p>
         </div>
-        <div>
+        <div id="res">
 
         </div>
     </section>
