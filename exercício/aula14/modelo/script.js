@@ -16,24 +16,24 @@
         if(fsex[0].checked){
             genero = 'Homem'
             if(idade >= 0 && idade < 10){
-                img.setAttribute('src', 'Your/bebeh.png')
+                img.setAttribute('src', 'bebeh.png')
             } else if(idade < 21){
-                img.setAttribute('src', 'Your/jovemh.png')
+                img.setAttribute('src', 'jovemh.png')
             } else if(idade < 50){
-                img.setAttribute('src', 'Your/adultoh.png')
+                img.setAttribute('src', 'adultoh.png')
             } else {
-                img.setAttribute('src', 'Your/idosoh.png')
+                img.setAttribute('src', 'idosoh.png')
             }
         } else if (fsex[1].checked){
             genero = 'Mulher'
             if(idade >= 0 && idade < 10){
-                img.setAttribute('src', 'Your/bebem.png')
+                img.setAttribute('src', 'bebem.png')
             } else if(idade < 21){
-                img.setAttribute('src', 'Your/jovemm.png')
+                img.setAttribute('src', 'jovemm.png')
             } else if(idade < 50){
-                img.setAttribute('src', 'Your/adultom.png')
+                img.setAttribute('src', 'adultom.png')
             } else {
-                img.setAttribute('src', 'Your/idosom.png')
+                img.setAttribute('src', 'idosom.png')
             }
         }
 
