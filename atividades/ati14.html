@@ -29,7 +29,11 @@
     margin: 0;                 /* sem margem exagerada */
 }
 
-
+.res{
+    width: 100%;
+    height: 100px;
+    background-color: #303030;
+}
     </style>
 </head>
 <body>
@@ -45,10 +49,12 @@
         <label for="valor">Qual é o valor de cada questão?</label>
         <input type="number" id="valor">
         <input type="button" value="calcular" onclick="calcularNota()">
-    </div>
-    <div class="res">
+
+        <div class="res">
         
     </div>
+    </div>
+    
 
     <script>
         function calcularNota(){
@@ -57,19 +63,21 @@
             var questão = document.getElementById('questao')
             var erro = document.getElementById('erro')
             var valor = document.getElementById('valor')
+            var res = document.getElementById('res')
 
             var ques = Number(questao.value)
             var aceda = Number(erro.value)
-            var valor = Number(peso.value)
-            
+            var peso = Number(valor.value)
+            var soma = aceda * peso
+
             if(materia.value.length == 0 || nome.value.length == 0 || questão.value.length == 0 || erro.value.length == 0 || valor.value.length == 0 ){
                 window.alert('[ERRO] sem dado')
             } else {
                 if(ques > 0 && aceda >= 0 && ques <= aceda ){
-                    window.alert('todo ok')
+                    res.innerHTML += `Aluno ${nome} aceu  ${aceda} questão é sorou a nota ${soma}`
                 } else {
-                    //var soma = ques * peso
-                    window.alert('[ERRO]')
+                    
+                    window.alert(`[ERRO] ${soma}`)
                 }
             }
         }
