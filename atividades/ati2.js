@@ -3,4 +3,4 @@ console.log(`você tem ${idade} ano`)
 if(idade < 18){
     console.log('Você é maior de idade.')
 } else{
-    console.log('Você é menor de idade.')}
+console.log('Você é menor de idade.')}
