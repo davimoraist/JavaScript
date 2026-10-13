@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 var numero = 0
 if(numero > 0){
     console.log(`POSITIVO`)
@@ -6,3 +7,13 @@ if(numero > 0){
 }else{
     console.log(`zero`)
 }    
+=======
+var  numero = 0
+if (numero > 0){
+    console.log('positivo')
+} else if (numero < 0){
+    console.log('negativo')
+} else{
+    console.log('zero')
+}
+>>>>>>> Stashed changes
