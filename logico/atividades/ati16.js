@@ -1,13 +1,13 @@
+var numero = [3, 9, 5];
 
-var numero = [3 , 9 , 5]
-if(numero[0] < numero[1] || numero[0] < numero[2] || numero[1] < numero[2]){
-    console.log(`meno é ${numero[0]} e maior é ${numero[2]}`)
-}
+var maior = numero[0];
+var menor = numero[0];
 
-if (numero[0] > numero[1] || numero[0] > numero[2] || numero[1] > numero[2]){
-    console.log(`meno é ${numero[2]} e maior é ${numero[0]}`)
-}
+if (numero[1] > maior) maior = numero[1];
+if (numero[2] > maior) maior = numero[2];
 
-if (numero[0] > numero[1] || numero[0] < numero[2] || numero[1] < numero[2]) {
-    console.log(`meno é ${numero[0]} e maior é ${numero[1]}`)
-} 
+if (numero[1] < menor) menor = numero[1];
+if (numero[2] < menor) menor = numero[2];
+
+console.log(`Maior: ${maior}`);
+console.log(`Menor: ${menor}`);
