@@ -1,16 +1,43 @@
-var numero = [1,2,3]
+var numero = [2, 3, 1];
 
-var menor = [0]
-var meio = [1]
-var maior = [2]
+var n1 = numero[0];
+var n2 = numero[1];
+var n3 = numero[2];
 
-if(numero[0] > menor || numero[0] > meio) {maior = numero[0]}
-if(numero[1] > meio || numero[1] > meio) { maior = numero[1]}
-if(numero[2] > maior ){maior = numero[2]}
+var menor, meio, maior;
 
-if(numero[0] > menor || numero[0] > maior){meio = numero[0]}
-if(numero[1] > meio || numero[1] > maior){meio = numero[1]}
-if(numero[2] < maior ){meio = numero[2]}
+// 1. Identificar quem é o menor de todos
+if (n1 <= n2 && n1 <= n3) {
+    menor = n1;
+    if (n2 <= n3) {
+        meio = n2;
+        maior = n3;
+    } else {
+        meio = n3;
+        maior = n2;
+    }
+}
+// 2. Se n2 for o menor de todos
+else if (n2 <= n1 && n2 <= n3) {
+    menor = n2;
+    if (n1 <= n3) {
+        meio = n1;
+        maior = n3;
+    } else {
+        meio = n3;
+        maior = n1;
+    }
+}
+// 3. Se n3 for o menor de todos
+else {
+    menor = n3;
+    if (n1 <= n2) {
+        meio = n1;
+        maior = n2;
+    } else {
+        meio = n2;
+        maior = n1;
+    }
+}
 
-console.log(meio)
-console.log(maior)
+console.log(`Ordem crescente: ${menor}, ${meio}, ${maior}`);
